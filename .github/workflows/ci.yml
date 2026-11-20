@@ -1,0 +1,52 @@
+name: CI — API Sentinel Express
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-test:
+    name: Node.js ${{ matrix.node-version }} (Express ${{ matrix.express-version }})
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [22.x, 24.x]
+        express-version: ['^4.21.2', '^5.0.1']
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies from lockfile
+        run: npm ci
+
+      - name: Install target Express peer version (${{ matrix.express-version }})
+        run: npm install --no-save express@${{ matrix.express-version }}
+
+      - name: Run ESLint code quality check
+        run: npm run lint
+
+      - name: Run Prettier formatting check
+        run: npm run format:check
+
+      - name: Build ESM and CommonJS distribution bundles
+        run: npm run build
+
+      - name: Run unit & integration test suite with V8 coverage
+        run: npm run test:coverage
+
+      - name: Verify distributable package contents (dry-run)
+        run: npm pack --dry-run

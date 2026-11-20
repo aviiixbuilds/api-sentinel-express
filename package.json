@@ -1,0 +1,78 @@
+{
+  "name": "api-sentinel-express",
+  "version": "1.0.0",
+  "description": "Lightweight, privacy-first Express.js observability and API monitoring middleware with in-memory latency analytics, P95 tracking, slow-request detection, and structured logging.",
+  "keywords": [
+    "express",
+    "express-middleware",
+    "observability",
+    "monitoring",
+    "api-monitoring",
+    "metrics",
+    "latency",
+    "p95",
+    "request-id",
+    "structured-logging",
+    "performance",
+    "javascript",
+    "nodejs",
+    "api-sentinel"
+  ],
+  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/api-sentinel-express#readme",
+  "bugs": {
+    "url": "https://github.com/YOUR_GITHUB_USERNAME/api-sentinel-express/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_GITHUB_USERNAME/api-sentinel-express.git"
+  },
+  "license": "MIT",
+  "author": "Aviral Dwivedi <your-email@example.com>",
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "SECURITY.md"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "peerDependencies": {
+    "express": "^4.18.0 || ^5.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@vitest/coverage-v8": "^3.0.5",
+    "esbuild": "^0.25.0",
+    "eslint": "^9.20.0",
+    "express": "^4.21.2",
+    "globals": "^15.15.0",
+    "prettier": "^3.5.0",
+    "supertest": "^7.0.0",
+    "vitest": "^3.0.5"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "lint": "eslint src tests examples benchmarks scripts",
+    "format": "prettier --write \"src/**/*.js\" \"tests/**/*.js\" \"examples/**/*.js\" \"benchmarks/**/*.js\" \"scripts/**/*.js\"",
+    "format:check": "prettier --check \"src/**/*.js\" \"tests/**/*.js\" \"examples/**/*.js\" \"benchmarks/**/*.js\" \"scripts/**/*.js\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "benchmark": "node benchmarks/overhead-benchmark.js",
+    "prepublishOnly": "npm run lint && npm run test && npm run build"
+  }
+}
