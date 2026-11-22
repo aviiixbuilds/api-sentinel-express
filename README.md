@@ -55,7 +55,7 @@ By registering a single middleware, developers get bounded in-memory latency and
 **API Sentinel** is integrated as a real production runtime dependency inside a separate, deployed full-stack Express application (**GitHub Profile Checker**):
 
 - **🌐 Live Deployed Demo**: [https://github-profile-checker-xzs3.onrender.com](https://github-profile-checker-xzs3.onrender.com)
-- **💻 Consumer Project Repository**: [https://github.com/esachdev28/github-profile-checker-](https://github.com/esachdev28/github-profile-checker-)
+- **💻 Consumer Project Deployed Link**: [https://github-profile-checker-xzs3.onrender.com](https://github-profile-checker-xzs3.onrender.com)
 - **📦 API Sentinel NPM Package**: [https://www.npmjs.com/package/api-sentinel-express](https://www.npmjs.com/package/api-sentinel-express)
 - **🛠️ Package Source Repository**: [https://github.com/aviiixbuilds/api-sentinel-express](https://github.com/aviiixbuilds/api-sentinel-express)
 

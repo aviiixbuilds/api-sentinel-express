@@ -10,9 +10,9 @@ This document contains the three required university submission entries and the 
 
 | # | Form Field | Deliverable URL / Value | Status |
 | :- | :--- | :--- | :--- |
-| **1** | **GitHub Repository (NPM Package Source)** | `https://github.com/<YOUR_GITHUB_USERNAME>/api-sentinel-express` | Ready to push from `./api-sentinel` |
-| **2** | **Published NPM Package Link** | `https://www.npmjs.com/package/api-sentinel-express` | Name verified available on `registry.npmjs.org`; ready for `npm publish` |
-| **3** | **GitHub Repository Where It Was Used (Consumer Demo App)** | `https://github.com/<YOUR_GITHUB_USERNAME>/api-sentinel-demo` | Ready to push from `./api-sentinel-demo` |
+| **1** | **GitHub Repository (NPM Package Source)** | `https://github.com/aviiixbuilds/api-sentinel-express` | Published on GitHub |
+| **2** | **Published NPM Package Link** | `https://www.npmjs.com/package/api-sentinel-express` | Published on NPM Registry |
+| **3** | **Consumer Project Deployed Link** | `https://github-profile-checker-xzs3.onrender.com` (Dashboard: `https://api-sentinel-demo-seven.vercel.app`) | Live Deployed Consumer Application |
 
 ---
 
